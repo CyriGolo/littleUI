@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:500;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle, white 10%, transparent 12%);
+  background-size: 2em 2em;
+  background-color: #010001;
+}
+
+.selected {
+  border: solid 3px white;
+	padding: 2px;
+	background: content-box;
+}
+
+.color:hover:not(.selected){
+  border: solid 3px rgba(255, 255, 255, 0.5);
+	padding: 2px;
+	background: content-box;
+}
+
+img {
+  width: 400px;
+  height: 270px;
+}
+
+svg {
+  align-items: center;
+}
+
+section {
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+}
+
+button {
+  background-color: rgba(128, 128, 128, 0.185);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+#example-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 
+    "🎨 🎨"
+    "⬅️ 🔍"
+    "⬅️ 🪟"
+    "⬅️ 🅿️"
+    "⬅️ 🖼️"
+    "nothing 🔼";
+}
+
+
+#theme-picker-section {
+  grid-area: 🎨;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side-bar-section {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: ⬅️;
+}
+#side-bar-section button {
+  padding: 18px;
+
+}
+#search-section {
+  grid-area: 🔍;
+}
+#search-section input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.185);
+  width: 95%;
+  color: white;
+}
+#view-section {
+  grid-area: 🪟;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+#view-section button {
+  padding: 7px 45px;
+}
+#progress-section {
+  grid-area: 🅿️;
+}
+.bar {
+  height: 15px;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.185);
+  border-radius: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+#progress{
+  border-radius: 25px;
+  width: 150px;
+  height: 15px;
+  background-color: white;
+}
+#image-section {
+  grid-area: 🖼️
+}
+#shape-section {
+  display: grid;
+  grid-area: 🔼;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 130px 130px 130px;
+  gap: 5px;
+}
+#shape-section button {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
